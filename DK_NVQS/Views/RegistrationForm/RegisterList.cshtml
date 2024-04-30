@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DK_NVQS.Models.Registration>
+
+@{
+    ViewBag.Title = "RegisterList";
+}
+
+<h2>RegisterList</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>CCCD</th>
+        <th>Họ Tên</th>
+        <th>Năm</th>
+        <th>Số lần đăng ký trước</th>
+        <th>Trạng thái</th>
+        <th>Hồ sơ sức khỏe</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Citizen.Name</td>
+                <td>@item.Citizen.CitizenID</td>
+                <td>@item.Date.ToString("yyyy")</td>
+                <td>@item.NumberOfRegisters</td>
+                <td>@item.Status</td>
+                <td>@item.Citizen.HealthRecord</td>
+            </tr>
+        }
+    </tbody>
+</table>

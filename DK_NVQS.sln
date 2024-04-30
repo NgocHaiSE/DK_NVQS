@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DK_NVQS", "DK_NVQS\DK_NVQS.csproj", "{A41CAF67-76FA-48FB-8431-60CEBE4792C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A41CAF67-76FA-48FB-8431-60CEBE4792C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41CAF67-76FA-48FB-8431-60CEBE4792C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41CAF67-76FA-48FB-8431-60CEBE4792C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41CAF67-76FA-48FB-8431-60CEBE4792C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E5D9C10-1359-4929-938B-F1598B57F0E9}
+	EndGlobalSection
+EndGlobal

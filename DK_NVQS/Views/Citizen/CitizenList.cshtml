@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DK_NVQS.Models.Citizen>
+
+@{
+    ViewBag.Title = "CitizenList";
+}
+
+<h2>CitizenList</h2>
+
+<div class="table-container">
+    <table class="table table-bordered table-striped">
+        <thead class="sticky-top" style="background-color: #ccc">
+            <tr>
+                <th>CCCD</th>
+                <th>Họ Tên</th>
+                <th>Giới Tính</th>
+                <th>Ngày Sinh</th>
+                <th>Tuổi</th>
+                <th>Quê Quán</th>
+                <th>Trạng Thái</th>
+                <th>Đủ ĐK</th>
+                <th>Sẵn Sàng Nhập Ngũ</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>@item.CitizenID</td>
+                    <td>@item.Name</td>
+                    <td>
+                        @if (!item.Gender.HasValue)
+                        {
+                            @:Không xác định
+                        }
+                        else if (item.Gender.Value)
+                        {
+                            @:Nam
+                        }
+                        else
+                        {
+                            @:Nữ
+                        }
+                    </td>
+                    <td>@item.DateOfBirth.Value.ToString("dd/MM/yyyy")</td>
+                    <td>@item.Age</td>
+                    <td>@item.Address</td>
+                    <td>@item.Hometown</td>
+                    <td>@item.Status</td>
+                    <td>@item.Eligible</td>
+                    <td>@item.Ready</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

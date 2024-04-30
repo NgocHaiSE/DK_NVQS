@@ -1,0 +1,74 @@
+﻿@model DK_NVQS.Models.CurriculumVitae
+@{
+    ViewBag.Title = "Sơ yếu lý lịch";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Military Service Health Record Form</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .photo {
+            border: 1px solid #000;
+            width: 4cm;
+            height: 6cm;
+            background-image: url('@Model.PhotoPath');
+            background-size: cover;
+        }
+        /* Additional styling... */
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1>Cộng hòa xã hội chủ nghĩa việt nam</h1>
+            <h2>Độc lập - Tự do - Hạnh phúc</h2>
+        </div>
+
+        <div class="photo">
+            @if (Model.PhotoPath != null)
+            {
+                <img src="@Url.Content(Model.PhotoPath)" alt="Profile Photo" style="width:100%;height:100%;">
+            }
+        </div>
+
+        <form action="/CurriculumVitae/Detail" method="post">
+            @Html.AntiForgeryToken()
+            <div>
+                <label for="name">Họ và tên:</label>
+                @Html.TextBoxFor(model => model.Citizen.Name, new { @class = "form-control", id = "name" })
+            </div>
+
+            <div>
+                <label for="birthdate">Sinh ngày:</label>
+                @Html.TextBoxFor(model => model.Citizen.DateOfBirth, new { @class = "form-control", id = "birthdate", type = "date" })
+            </div>
+
+            <div>
+                <label for="jobBefore">Nghề nghiệp trước khi nhập ngũ:</label>
+                @Html.TextBoxFor(model => model.JobBefore, new { @class = "form-control", id = "jobBefore" })
+            </div>
+
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
