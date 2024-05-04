@@ -47,6 +47,7 @@
                         NoGlassLeft = c.String(),
                         PathologicalEyes = c.String(),
                         NormalRight = c.Single(),
+
                         NormalLeft = c.Single(),
                         WhisperLeft = c.Single(),
                         WhisperRight = c.Single(),
