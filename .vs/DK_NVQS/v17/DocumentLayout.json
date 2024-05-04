@@ -1,22 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C#\\Project\\DK_NVQS\\",
+  "WorkspaceRootPath": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|d:\\c#\\project\\dk_nvqs\\dk_nvqs\\views\\citizen\\citizenlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|c:\\users\\prodhai\\documents\\github\\dk_nvqs\\dk_nvqs\\migrations\\202405040139179_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\migrations\\202405040139179_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|c:\\users\\prodhai\\documents\\github\\dk_nvqs\\dk_nvqs\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|c:\\users\\prodhai\\documents\\github\\dk_nvqs\\dk_nvqs\\models\\healthrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\models\\healthrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\dk_nvqs\\models\\citizen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\models\\citizen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\dk_nvqs\\controllers\\citizencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\controllers\\citizencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|c:\\users\\prodhai\\documents\\github\\dk_nvqs\\dk_nvqs\\controllers\\curriculumvitaecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\controllers\\curriculumvitaecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\dk_nvqs\\views\\citizen\\citizenlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\views\\citizen\\citizenlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|D:\\C#\\Project\\DK_NVQS\\dk_nvqs\\models\\nvqsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\dk_nvqs\\models\\nvqsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\models\\nvqsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|D:\\C#\\Project\\DK_NVQS\\dk_nvqs\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\dk_nvqs\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|D:\\C#\\Project\\DK_NVQS\\dk_nvqs\\models\\citizen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\models\\citizen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +46,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "202405040139179_init.cs",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Migrations\\202405040139179_init.cs",
+              "RelativeDocumentMoniker": "DK_NVQS\\Migrations\\202405040139179_init.cs",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Migrations\\202405040139179_init.cs",
+              "RelativeToolTip": "DK_NVQS\\Migrations\\202405040139179_init.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T01:39:23.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "DK_NVQS\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "DK_NVQS\\Migrations\\Configuration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T01:39:06.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HealthRecord.cs",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Models\\HealthRecord.cs",
+              "RelativeDocumentMoniker": "DK_NVQS\\Models\\HealthRecord.cs",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Models\\HealthRecord.cs",
+              "RelativeToolTip": "DK_NVQS\\Models\\HealthRecord.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T01:38:13.224Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -38,24 +97,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "CurriculumVitaeController.cs",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Controllers\\CurriculumVitaeController.cs",
+              "RelativeDocumentMoniker": "DK_NVQS\\Controllers\\CurriculumVitaeController.cs",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Controllers\\CurriculumVitaeController.cs",
+              "RelativeToolTip": "DK_NVQS\\Controllers\\CurriculumVitaeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T01:26:03.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CitizenController.cs",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Controllers\\CitizenController.cs",
+              "RelativeDocumentMoniker": "DK_NVQS\\Controllers\\CitizenController.cs",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Controllers\\CitizenController.cs",
+              "RelativeToolTip": "DK_NVQS\\Controllers\\CitizenController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T01:26:01.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CitizenList.cshtml",
-              "DocumentMoniker": "D:\\C#\\Project\\DK_NVQS\\DK_NVQS\\Views\\Citizen\\CitizenList.cshtml",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Views\\Citizen\\CitizenList.cshtml",
               "RelativeDocumentMoniker": "DK_NVQS\\Views\\Citizen\\CitizenList.cshtml",
-              "ToolTip": "D:\\C#\\Project\\DK_NVQS\\DK_NVQS\\Views\\Citizen\\CitizenList.cshtml",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Views\\Citizen\\CitizenList.cshtml",
               "RelativeToolTip": "DK_NVQS\\Views\\Citizen\\CitizenList.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAdAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABAAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-30T02:00:34.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Web.config",
-              "DocumentMoniker": "D:\\C#\\Project\\DK_NVQS\\DK_NVQS\\Web.config",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Web.config",
               "RelativeDocumentMoniker": "DK_NVQS\\Web.config",
-              "ToolTip": "D:\\C#\\Project\\DK_NVQS\\DK_NVQS\\Web.config",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Web.config",
               "RelativeToolTip": "DK_NVQS\\Web.config",
               "ViewState": "AQIAADkAAAAAAAAAAAAAAD8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -64,27 +149,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "NVQSDBContext.cs",
-              "DocumentMoniker": "D:\\C#\\Project\\DK_NVQS\\DK_NVQS\\Models\\NVQSDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Models\\NVQSDBContext.cs",
               "RelativeDocumentMoniker": "DK_NVQS\\Models\\NVQSDBContext.cs",
-              "ToolTip": "D:\\C#\\Project\\DK_NVQS\\DK_NVQS\\Models\\NVQSDBContext.cs",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Models\\NVQSDBContext.cs",
               "RelativeToolTip": "DK_NVQS\\Models\\NVQSDBContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T14:15:39.41Z"
+              "WhenOpened": "2024-04-29T14:15:39.41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Citizen.cs",
-              "DocumentMoniker": "D:\\C#\\Project\\DK_NVQS\\DK_NVQS\\Models\\Citizen.cs",
+              "DocumentMoniker": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Models\\Citizen.cs",
               "RelativeDocumentMoniker": "DK_NVQS\\Models\\Citizen.cs",
-              "ToolTip": "D:\\C#\\Project\\DK_NVQS\\DK_NVQS\\Models\\Citizen.cs",
+              "ToolTip": "C:\\Users\\ProDHai\\Documents\\GitHub\\DK_NVQS\\DK_NVQS\\Models\\Citizen.cs",
               "RelativeToolTip": "DK_NVQS\\Models\\Citizen.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAgwCoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T14:15:29.978Z"
+              "WhenOpened": "2024-04-29T14:15:29.978Z",
+              "EditorCaption": ""
             }
           ]
         }

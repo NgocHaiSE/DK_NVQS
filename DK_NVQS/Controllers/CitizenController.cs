@@ -10,16 +10,9 @@ namespace DK_NVQS.Controllers
     public class CitizenController : Controller
     {
         NVQSDBContext db = new NVQSDBContext();
-        // GET: Citizen
-        public ActionResult CitizenList()
-        {
-            List<Citizen> citizenList = db.Citizens.ToList();
-            return View(citizenList);
-        }
-        
-        [HttpPost]
-        public ActionResult CitizenList(string citizenID, string name, string gender, DateTime? dob, 
-            int? age, string hometown, string address, string status, string eligible, string ready)
+
+        public ActionResult CitizenList(string citizenID = null, string name = null, string gender = null, DateTime? dob = null,
+            int? age = null, string hometown = null, string address = null, string status = null, string eligible = null, string ready = null)
         {
             var citizenList = db.Citizens.AsQueryable();
             if (!string.IsNullOrEmpty(citizenID))
@@ -59,14 +52,14 @@ namespace DK_NVQS.Controllers
             }
             if (!string.IsNullOrEmpty(eligible))
             {
-                if(eligible == "Đủ điều kiện")
+                if (eligible == "Đủ điều kiện")
                     citizenList = citizenList.Where(c => c.Eligible == true);
                 else if (eligible == "Không đủ điều kiện")
                     citizenList = citizenList.Where(c => c.Eligible == false);
             }
             if (!string.IsNullOrEmpty(ready))
             {
-                if(ready == "Sẵn sàng nhập ngũ")
+                if (ready == "Sẵn sàng nhập ngũ")
                     citizenList = citizenList.Where(a => a.Ready == true);
                 else if (ready == "Chưa sẵn sàng nhập ngũ")
                     citizenList = citizenList.Where(a => a.Ready == false);

@@ -10,8 +10,9 @@ namespace DK_NVQS.Models
     public class HealthRecord
     {
         [Key]
-        public int RecordID {  get; set; }
+        public int RecordID { get; set; }
         public string CBC { get; set; }
+        public string BloodGroup { get; set; }
         public string Biochemical { get; set; }
         public string Immunity { get; set; }
         public string Xray { get; set; }
@@ -32,7 +33,7 @@ namespace DK_NVQS.Models
         public Nullable<float> WhisperLeft { get; set; }
         public Nullable<float> WhisperRight { get; set; }
         public string PathologicalENT { get; set; }
-        public string Dentomaxillofacial { get; set; }
+        public string DOL { get; set; }
         public Nullable<float> Circuit { get; set; }
         public Nullable<float> BloodPressure { get; set; }
         public string PathologicalMedical { get; set; }
@@ -40,6 +41,15 @@ namespace DK_NVQS.Models
         public string Surgery { get; set; }
         public string Dermatology { get; set; }
         public string Conclusion { get; set; }
+        public string PhysicalPoint { get; set; }
+        public string EyePoint { get; set; }
+        public string ENTPoint { get; set; }
+        public string DOLPoint { get; set; }
+        public string MedicalPoint { get; set; }
+        public string NeuropsychiatricPoint { get; set; }
+        public string SurgeryPoint { get; set; }
+        public string DermatologyPoint { get; set; }
+        public string ConclusionPoint { get; set; }
         public virtual Citizen Citizen { get; set; }
     }
 }
