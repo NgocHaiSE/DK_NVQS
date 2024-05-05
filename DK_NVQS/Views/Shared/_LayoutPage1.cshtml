@@ -12,10 +12,15 @@
         .field-validation-error {
             color: red;
         }
+
+        .requiredMark:after {
+            content: "*";
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-info navbar-dark>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
         <a class="navbar-brand" href="#">Company</a>
         <div class="col-8"></div>
         <ul class="navbar-nav">
@@ -29,6 +34,12 @@
                 <a class="nav-link" href="/home/DanhSachMien">Danh sách miễn NVQS</a>
             </li>
         </ul>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div style="color:red">
+                Hello @User.Identity.Name;
+            </div>
+        }
     </nav>
     <div class="container-fluid">
         @RenderBody()
