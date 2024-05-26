@@ -1,0 +1,34 @@
+﻿@model  DK_NVQS.Models.Citizen
+
+@{
+    ViewBag.Title = "Thêm Công Dân Mới";
+}
+<div class="m-auto" style="max-width:400px; padding-top: 40px">
+    <h1>@ViewBag.Title</h1>
+    @using (Html.BeginForm("Add", "Citizen", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="CCCD">CCCD</label>
+            @Html.TextBoxFor(model => model.CitizenID, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label for="HoTen">Họ Tên</label>
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label for="GioiTinh">Giới Tính</label>
+            @Html.TextBoxFor(model => model.Gender, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label for="NgaySinh">Ngày Sinh</label>
+            @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    }
+    @Html.ActionLink("Danh Sách Công Dân", "Citizenlist", "Citizen")
+</div>
+

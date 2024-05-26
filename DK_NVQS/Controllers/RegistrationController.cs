@@ -12,12 +12,6 @@ namespace DK_NVQS.Controllers
     {
         NVQSDBContext db = new NVQSDBContext();
         // GET: RegistrationForm
-        public ActionResult RegisterList()
-        {
-            List<Registration> registrationForms = db.Registrations.ToList();
-            return View(registrationForms);
-
-        }
 
         [HttpPost]
         public ActionResult RegisterList(string citizenID, string name, int? numberOfRegister,

@@ -4,7 +4,31 @@
     ViewBag.Title = "RegisterList";
 }
 
-<h2>RegisterList</h2>
+<style>
+    .table-container {
+        max-height: 400px; /* Example max height */
+        overflow-y: auto;
+    }
+
+    #SearchForm > * {
+        margin-right: 10px;
+    }
+
+    #SearchForm {
+        max-width: 75vw;
+    }
+</style>
+<form method="get" action="@Url.Action("RegisterList", "Registration")">
+    <p class="form-check-label">Tìm kiếm</p>
+    <div id="SearchForm" class="form-group d-flex">
+        <input type="number" id="searchCCCD" name="searchCCCD" class="form-control" placeholder="CCCD" />
+        <input type="text" id="searchName" name="searchName" class="form-control" placeholder="Họ tên" />
+        <input type="number" id="searchYear" name="searchYear" class="form-control" placeholder="Năm" style="flex-basis:50%" />
+        <input type="number" id="searchTime" name="searchTime" class="form-control" placeholder="ĐK lần thứ" style="flex-basis:50%" />
+        <input type="text" id="searchStatus" name="searchStatus" class="form-control" placeholder="Trạng thái" />
+        <button type="submit" class="btn btn-primary">Tìm</button>
+    </div>
+</form>
 
 <table class="table table-bordered">
     <tr>
@@ -14,17 +38,30 @@
         <th>Số lần đăng ký trước</th>
         <th>Trạng thái</th>
         <th>Hồ sơ sức khỏe</th>
+        <th>Thay đổi trạng thái</th>
     </tr>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.Citizen.Name</td>
                 <td>@item.Citizen.CitizenID</td>
+                <td>@item.Citizen.Name</td>
                 <td>@item.Date.ToString("yyyy")</td>
                 <td>@item.NumberOfRegisters</td>
                 <td>@item.Status</td>
-                <td>@item.Citizen.HealthRecord</td>
+                <td>
+                    <a href="@Url.Action("List", "HealthRecord", new { id = item.CitizenID })">Xem</a>
+                </td>
+                <td>
+                    <form method="post" action="@Url.Action("ChangeStatus", "Admin")">
+                        <input type="hidden" name="id" value="@item.RegistrationFormID" />
+                        <select name="newStatus" class="form-control" onchange="this.form.submit()">
+                            <option value="Pending" @(item.Status == "Chờ xét duyệt" ? "selected" : "")>Chờ xét duyệt</option>
+                            <option value="Approved" @(item.Status == "Phê duyệt" ? "selected" : "")>Phê duyệt</option>
+                            <option value="Rejected" @(item.Status == "Từ chối" ? "selected" : "")>Từ chối</option>
+                        </select>
+                    </form>
+                </td>
             </tr>
         }
     </tbody>
