@@ -67,5 +67,68 @@ namespace DK_NVQS.Controllers
 
             return View(citizenList.ToList());
         }
+
+        public ActionResult Edit(string citizenID, Citizen updated = null)
+        {
+            if (Request.HttpMethod == "POST")
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Entry(updated).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Citizenlist");
+                }
+                return View(updated);
+            }
+
+            Citizen congDan = db.Citizens.Find(citizenID);
+            if (congDan == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(congDan);
+        }
+
+        public ActionResult Delete(string citizenID)
+        {
+            Citizen congDan = db.Citizens.Find(citizenID);
+            if (congDan == null)
+            {
+                return HttpNotFound();
+            }
+            return View(congDan);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(string citizenID)
+        {
+            Citizen congDan = db.Citizens.Find(citizenID);
+            if (congDan == null)
+            {
+                return HttpNotFound();
+            }
+
+            db.Citizens.Remove(congDan);
+            db.SaveChanges();
+            return RedirectToAction("Citizenlist");
+        }
+
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Add(Citizen newCitizen)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Citizens.Add(newCitizen);
+                db.SaveChanges();
+                return RedirectToAction("Citizenlist");
+            }
+            return View(newCitizen);
+        }
     }
 }

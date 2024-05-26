@@ -1,0 +1,16 @@
+﻿@model DK_NVQS.Models.Citizen
+
+@{
+    ViewBag.Title = "Xác Nhận Xóa Công Dân";
+}
+<h1>@ViewBag.Title</h1>
+<p>Bạn có chắc chắn muốn xóa công dân @Model.Name với CCCD @Model.CitizenID không?</p>
+
+@using (Html.BeginForm("Delete", "Citizen", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.CitizenID)
+
+    <button type="submit" class="btn btn-danger">Xóa</button>
+}
+
+@Html.ActionLink("Hủy", "Citizenlist", null, new { @class = "btn btn-secondary" })

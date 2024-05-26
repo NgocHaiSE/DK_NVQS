@@ -318,6 +318,8 @@
     <Content Include="Views\HealthRecord\List.cshtml" />
     <Content Include="Views\Clinical\Detail.cshtml" />
     <Content Include="Views\SubClinical\Detail.cshtml" />
+    <Content Include="Views\Citizen\Edit.cshtml" />
+    <Content Include="Views\Citizen\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

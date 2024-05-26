@@ -1,0 +1,42 @@
+﻿@model DK_NVQS.Models.Citizen
+
+@{
+    ViewBag.Title = "Chi Tiết hồ sơ";
+}
+
+<h1>@ViewBag.Title</h1>
+@using (Html.BeginForm("Edit", "Citizen", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.CitizenID)
+
+    <div class="form-group">
+        <label for="HoTen">Họ Tên</label>
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="GioiTinh">Giới Tính</label>
+        @Html.TextBoxFor(model => model.Gender, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="NgaySinh">Ngày Sinh</label>
+        @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="QueQuan">Quê quán</label>
+        @Html.TextBoxFor(model => model.Hometown, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="TrangThai">Trạng thái</label>
+        @Html.TextBoxFor(model => model.Status, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+}
+
+<div>
+    @Html.ActionLink("Danh Sách Công Dân", "Citizenlist", "Citizen")
+</div>

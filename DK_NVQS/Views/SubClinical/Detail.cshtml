@@ -28,52 +28,45 @@
 
         .details {
             margin-left: 20px;
+            line-height: 1.8;
         }
-
-            .details p {
-                margin: 0;
-            }
-
-                .details p + p {
-                    margin-left: 20px;
-                }
     </style>
 </head>
 <body>
     <div class="container py-5">
         <div class="section-title">
-            <h6>II. Khám sức khỏe</h6>
             <div class="sub-section-title">
-                <p>1. Xét nghiệm cận lâm sàng</p>
+                <h3> Xét nghiệm cận lâm sàng</h3>
             </div>
             <div class="details">
                 @if (Model.BloodTest != null && Model.BloodTest.Any())
                 {
                     foreach (var bloodTest in Model.BloodTest)
                     {
-                        <p>- Công thức máu: HC @bloodTest.HC HC, HST @bloodTest.HST, TC @bloodTest.TC, BC @bloodTest.BC</p>
-                        <p>CTBC @bloodTest.CTBC; Nhóm máu @bloodTest.BloodType</p>
+                        <p>- Công thức máu: HC @bloodTest.HC .................... HST @bloodTest.HST .................... TC @bloodTest.TC .................... BC @bloodTest.BC ....................</p>
+                        <p>CTBC @bloodTest.CTBC ...............................; Nhóm máu @bloodTest.BloodType ............</p>
                     }
                 }
                 @if (Model.BiochemicalTest != null && Model.BiochemicalTest.Any())
                 {
                     foreach (var biochemicalTest in Model.BiochemicalTest)
                     {
-                        <p>- Sinh hóa: AST @biochemicalTest.AST, ALT @biochemicalTest.ALT, Ure @biochemicalTest.Ure, Creatinin @biochemicalTest.Creatinin, Đường máu @biochemicalTest.Glucose</p>
+                        <p>- Sinh hóa: AST @biochemicalTest.AST ............ ALT @biochemicalTest.ALT ............ Ure @biochemicalTest.Ure ............ Creatinin @biochemicalTest.Creatinin ............ Đường máu @biochemicalTest.Glucose ............</p>
                     }
                 }
                 @if (Model.ImmunologicalTest != null && Model.ImmunologicalTest.Any())
                 {
                     foreach (var immunologicalTest in Model.ImmunologicalTest)
                     {
-                        <p>- Miễn dịch: HBsAg @immunologicalTest.HBsAg, Anti-HCV @immunologicalTest.AntiHCV</p>
+                        <p>- Miễn dịch: HBsAg @immunologicalTest.HBsAg .................... Anti-HCV @immunologicalTest.AntiHCV ....................</p>
                     }
                 }
                 @if (Model.UrineTest != null && Model.UrineTest.Any())
                 {
                     foreach (var urineTest in Model.UrineTest)
                     {
-                        <p>- Nước tiểu toàn bộ: Tỉ trọng @urineTest.SpecificGravity, pH @urineTest.pH, BC @urineTest.BC, HC @urineTest.HC, Nitrit @urineTest.Nitrit, Protein @urineTest.Protein, Glucose @urineTest.Glucose, Cetonic @urineTest.Cetonic, Bilirubin @urineTest.Bilirubin, Urobilinogen @urineTest.Urobilinogen</p>
+                        <p>- Nước tiểu toàn bộ: Tỉ trọng @urineTest.SpecificGravity ............ pH @urineTest.pH ............ BC @urineTest.BC ............ HC @urineTest.HC ............ Nitrit @urineTest.Nitrit ............</p>
+                        <p>Protein @urineTest.Protein ............ Glucose @urineTest.Glucose ............ Cetonic @urineTest.Cetonic ............ Bilirubin @urineTest.Bilirubin ............ Urobilinogen @urineTest.Urobilinogen ............</p>
                     }
                 }
                 @if (!string.IsNullOrEmpty(Model.Radiography))

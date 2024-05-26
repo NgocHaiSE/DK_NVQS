@@ -5,6 +5,60 @@
 }
 
 <h2>CitizenList</h2>
+<style>
+
+
+    .table-container {
+        max-height: 400px; 
+        overflow-y: auto;
+    }
+
+    #GioiTinhSearch {
+        flex-basis: 25%;
+    }
+
+    #TuoiSearch {
+        flex-basis: 30%
+    }
+
+    #TrangThaiSearch {
+        flex-basis: 75%
+    }
+
+    #SearchForm > * {
+        margin-right: 10px;
+    }
+</style>
+<p>
+
+    @Html.ActionLink("Thêm Công Dân", "Add", "CongDan", null, new { @class = "btn btn-primary" })
+</p>
+
+<form action="@Url.Action("DanhSachCongDan")" method="get">
+
+    <p class="form-check-label">Tìm kiếm</p>
+    <div id="SearchForm" class="form-group d-flex">
+        <input type="text" name="CitizenID" id="CCCDSearch" class="form-control" placeholder="CitizenID" />
+        <input type="text" name="Name" id="NameSearch" class="form-control" placeholder="Name" />
+        <select class="custom-select" id="GenderSearch" name="Gender">
+            <option value=1>Nam</option>
+            <option value=0>Nữ</option>
+            <option value="trong" selected>Trống</option>
+        </select>
+        <input type="number" name="Age" id="AgeSearch" class="form-control" placeholder="Age" />
+        <input type="text" name="Hometown" id="HometownSearch" class="form-control" placeholder="Hometown" />
+        <input type="text" name="Status" id="StatusSearch" class="form-control" placeholder="Status" />
+        <div class="d-flex">
+            <label class="form-check-label text-nowrap align-content-center" for="EligibleSearch">Đủ ĐK</label>
+            <input id="EligibleSearch" class="form-control" type="checkbox" name="Eligible" style="margin-left:3px" />
+        </div>
+        <div class="d-flex">
+            <label class="form-check-label text-nowrap align-content-center" for="ReadySearch">Sẵn Sàng Nhập Ngũ</label>
+            <input id="ReadySearch" class="form-control" type="checkbox" name="Ready" style="margin-left:3px" />
+        </div>
+        <button type="submit" class="btn btn-primary">Tìm</button>
+    </div>
+</form>
 
 <div class="table-container">
     <table class="table table-bordered table-striped">
@@ -22,6 +76,7 @@
                 <th>Sẵn Sàng Nhập Ngũ</th>
                 <th>Sơ yếu lý lịch</th>
                 <th>Hồ sơ khám sức khỏe</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -30,7 +85,7 @@
 
                 <tr>
                     <td>@item.CitizenID</td>
-                    <td>@item.Name</td>
+                    <td>@Html.ActionLink(@item.Name, "Edit", new { citizenID = item.CitizenID })</td>
                     <td>
                         @if (!item.Gender.HasValue)
                         {
@@ -84,8 +139,14 @@
                     <td>
                         <a href="@Url.Action("List", "HealthRecord", new {id = item.CitizenID})">Xem</a>
                     </td>
+                    <td>
+                        @Html.ActionLink("Xóa", "Delete", new { citizenID = item.CitizenID })
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
+</div>
+<div>
+    Tổng số công dân: @Model.Count()
 </div>
