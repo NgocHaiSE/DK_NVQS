@@ -23,8 +23,8 @@ namespace DK_NVQS.Models
         public Nullable<bool> Eligible { get; set; }
         public Nullable<bool> Ready { get; set; }
         public virtual List<Registration> Registrations { get; set; }
-        public virtual List<HealthRecord> HealthRecord { get; set; }
-        public virtual List<CurriculumVitae> QurriculumVitae { get; set; }
+        public virtual List<HealthRecord> HealthRecords { get; set; }
+        public virtual List<CurriculumVitae> CurriculumVitaes { get; set; }
 
         public int CalculateAge(DateTime dateOfBirth)
         {

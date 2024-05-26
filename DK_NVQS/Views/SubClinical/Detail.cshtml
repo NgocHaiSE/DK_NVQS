@@ -1,0 +1,100 @@
+﻿@model DK_NVQS.Models.Subclinical
+@{
+    ViewBag.Title = "Phiếu Khám Sức Khỏe";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .sub-section-title {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .details {
+            margin-left: 20px;
+        }
+
+            .details p {
+                margin: 0;
+            }
+
+                .details p + p {
+                    margin-left: 20px;
+                }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="section-title">
+            <h6>II. Khám sức khỏe</h6>
+            <div class="sub-section-title">
+                <p>1. Xét nghiệm cận lâm sàng</p>
+            </div>
+            <div class="details">
+                @if (Model.BloodTest != null && Model.BloodTest.Any())
+                {
+                    foreach (var bloodTest in Model.BloodTest)
+                    {
+                        <p>- Công thức máu: HC @bloodTest.HC HC, HST @bloodTest.HST, TC @bloodTest.TC, BC @bloodTest.BC</p>
+                        <p>CTBC @bloodTest.CTBC; Nhóm máu @bloodTest.BloodType</p>
+                    }
+                }
+                @if (Model.BiochemicalTest != null && Model.BiochemicalTest.Any())
+                {
+                    foreach (var biochemicalTest in Model.BiochemicalTest)
+                    {
+                        <p>- Sinh hóa: AST @biochemicalTest.AST, ALT @biochemicalTest.ALT, Ure @biochemicalTest.Ure, Creatinin @biochemicalTest.Creatinin, Đường máu @biochemicalTest.Glucose</p>
+                    }
+                }
+                @if (Model.ImmunologicalTest != null && Model.ImmunologicalTest.Any())
+                {
+                    foreach (var immunologicalTest in Model.ImmunologicalTest)
+                    {
+                        <p>- Miễn dịch: HBsAg @immunologicalTest.HBsAg, Anti-HCV @immunologicalTest.AntiHCV</p>
+                    }
+                }
+                @if (Model.UrineTest != null && Model.UrineTest.Any())
+                {
+                    foreach (var urineTest in Model.UrineTest)
+                    {
+                        <p>- Nước tiểu toàn bộ: Tỉ trọng @urineTest.SpecificGravity, pH @urineTest.pH, BC @urineTest.BC, HC @urineTest.HC, Nitrit @urineTest.Nitrit, Protein @urineTest.Protein, Glucose @urineTest.Glucose, Cetonic @urineTest.Cetonic, Bilirubin @urineTest.Bilirubin, Urobilinogen @urineTest.Urobilinogen</p>
+                    }
+                }
+                @if (!string.IsNullOrEmpty(Model.Radiography))
+                {
+                    <p>- X-quang tim phổi: @Model.Radiography</p>
+                }
+                @if (!string.IsNullOrEmpty(Model.AbdominalUltrasound))
+                {
+                    <p>- Siêu âm bụng tổng quát: @Model.AbdominalUltrasound</p>
+                }
+                @if (!string.IsNullOrEmpty(Model.ECG))
+                {
+                    <p>- Điện tim: @Model.ECG</p>
+                }
+                @if (!string.IsNullOrEmpty(Model.OtherTests))
+                {
+                    <p>- Các XN khác (nếu có): @Model.OtherTests</p>
+                }
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

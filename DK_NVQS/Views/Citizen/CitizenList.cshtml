@@ -15,10 +15,13 @@
                 <th>Giới Tính</th>
                 <th>Ngày Sinh</th>
                 <th>Tuổi</th>
+                <th>Địa chỉ</th>
                 <th>Quê Quán</th>
                 <th>Trạng Thái</th>
                 <th>Đủ ĐK</th>
                 <th>Sẵn Sàng Nhập Ngũ</th>
+                <th>Sơ yếu lý lịch</th>
+                <th>Hồ sơ khám sức khỏe</th>
             </tr>
         </thead>
         <tbody>
@@ -47,8 +50,40 @@
                     <td>@item.Address</td>
                     <td>@item.Hometown</td>
                     <td>@item.Status</td>
-                    <td>@item.Eligible</td>
-                    <td>@item.Ready</td>
+                    <td>
+                        @if (!item.Eligible.HasValue)
+                        {
+                            @:Không xác định
+                        }
+                        else if (item.Gender.Value)
+                        {
+                            @:Đủ điều kiện
+                        }
+                        else
+                        {
+                            @:Không đủ điều kiện
+                        }
+                    </td>
+                    <td>
+                        @if (!item.Ready.HasValue)
+                        {
+                            @:Không xác định
+                        }
+                        else if (item.Gender.Value)
+                        {
+                            @:Sẵn sàng nhập ngũ
+                        }
+                        else
+                        {
+                            @:Chưa sẵn sàng nhập ngủ
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Detail", "CurriculumVitae", new { id = item.CitizenID })">Xem</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("List", "HealthRecord", new {id = item.CitizenID})">Xem</a>
+                    </td>
                 </tr>
             }
         </tbody>

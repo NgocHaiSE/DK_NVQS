@@ -7,68 +7,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Military Service Health Record Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-        /* Add your CSS styling here */
-        body {
-            font-family: Arial, sans-serif;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .form-container {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #000;
-        }
-
-        .header {
-            text-align: center;
+        .title {
             margin-bottom: 20px;
         }
 
-        .photo {
-            border: 1px solid #000;
-            width: 4cm;
-            height: 6cm;
-            background-image: url('@Model.PhotoPath');
-            background-size: cover;
+        .avatar {
+            width: 120px;
+            height: 160px;
+            text-align: center;
+            line-height: 160px;
+            font-style: italic;
         }
-        /* Additional styling... */
+
+        .so-yeu-ly-lich {
+            margin-top: 20px;
+        }
+
+            .so-yeu-ly-lich .title {
+                margin-bottom: 10px;
+            }
+
+            .so-yeu-ly-lich .d-flex {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .so-yeu-ly-lich p {
+                margin: 0;
+                flex: 1;
+            }
+
+                .so-yeu-ly-lich p + p {
+                    margin-left: 10px;
+                }
+
+            .so-yeu-ly-lich .ps-5 {
+                padding-left: 2.5rem;
+            }
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <div class="header">
-            <h1>Cộng hòa xã hội chủ nghĩa việt nam</h1>
-            <h2>Độc lập - Tự do - Hạnh phúc</h2>
+    <div class="container py-5">
+        <div class="title d-flex align-items-center gap-5">
+            <div class="avatar border border-2 px-3 py-5">
+                <i>Ảnh 4 x 6</i>
+            </div>
+            <div class="mx-auto">
+                <h5 class="fw-bold">Phiếu sức khỏe nghĩa vụ quân sự</h5>
+            </div>
         </div>
+        <div class="px-3 pb-5 pt-2">
+            <div class="so-yeu-ly-lich pb-5">
+                <div class="title">
+                    <h6>I. Sơ yếu lý lịch</h6>
+                </div>
+                <div class="d-flex">
+                    <p>Họ và tên: @Model.Citizen.Name</p>
+                    <p>Sinh ngày: @Model.Citizen.DateOfBirth.Value.ToString("dd/MM/yyyy") </p>
+                    <p>
+                        Giới tính: @if (!Model.Citizen.Gender.HasValue)
+                        {
+                            @:Không xác định
+                        }
+                        else if (Model.Citizen.Gender.Value)
+                        {
+                            @:Nam
+                        }
+                        else
+                        {
+                            @:Nữ
+                        }
+                    </p>
+                </div>
 
-        <div class="photo">
-            @if (Model.PhotoPath != null)
-            {
-                <img src="@Url.Content(Model.PhotoPath)" alt="Profile Photo" style="width:100%;height:100%;">
-            }
+                <div class="d-flex">
+                    <p>Nghề nghiệp trước khi nhập ngũ: @Model.JobBefore</p>
+                    <p>CCCD: @Model.CitizenID </p>
+                </div>
+                <div class="d-flex">
+                    <p>Họ và tên bố: @Model.FatherName</p>
+                    <p>Năm sinh: @Model.FatherBornYear</p>
+                    <p>Nghề nghiệp: @Model.FatherJob </p>
+                </div>
+                <div class="d-flex">
+                    <p>Họ và tên mẹ: @Model.MotherName</p>
+                    <p>Năm sinh: @Model.MotherBornYear</p>
+                    <p>Nghề nghiệp: @Model.MotherJob</p>
+                </div>
+                <div class="d-flex">
+                    <p>Nguyên quán: @Model.Domicile</p>
+                </div>
+                <div class="d-flex">
+                    <p>Trú quán: @Model.Residence</p>
+                </div>
+                <div>
+                    <p>Tiền sử bệnh:..................</p>
+                    <p class="ps-5">
+                        Gia đình: @if (Model.FamilyAnamnesis == null)
+                        {
+                            @:Không
+                        }
+                        else
+                        {
+                            @Model.FamilyAnamnesis
+                        }
+                    </p>
+                    <p class="ps-5">
+                        Bản thân: @if (Model.FamilyAnamnesis == null)
+                        {
+                            @:Không
+                        }
+                        else
+                        {
+                            @Model.FamilyAnamnesis
+                        }
+                    </p>
+                </div>
+            </div>
         </div>
-
-        <form action="/CurriculumVitae/Detail" method="post">
-            @Html.AntiForgeryToken()
-            <div>
-                <label for="name">Họ và tên:</label>
-                @Html.TextBoxFor(model => model.Citizen.Name, new { @class = "form-control", id = "name" })
-            </div>
-
-            <div>
-                <label for="birthdate">Sinh ngày:</label>
-                @Html.TextBoxFor(model => model.Citizen.DateOfBirth, new { @class = "form-control", id = "birthdate", type = "date" })
-            </div>
-
-            <div>
-                <label for="jobBefore">Nghề nghiệp trước khi nhập ngũ:</label>
-                @Html.TextBoxFor(model => model.JobBefore, new { @class = "form-control", id = "jobBefore" })
-            </div>
-
-
-            <button type="submit">Submit</button>
-        </form>
+           
     </div>
 </body>
 </html>

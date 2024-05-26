@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,7 +11,8 @@ namespace DK_NVQS.Models
     public class CurriculumVitae
     {
         [Key]
-        public int QurriculumVitaeID {  get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int CurriculumVitaeID {  get; set; }
         public string CitizenID { get; set; }
         public string PhotoPath { get; set; }
         public string JobBefore { get; set; }

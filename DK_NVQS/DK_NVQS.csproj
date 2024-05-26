@@ -156,10 +156,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CitizenController.cs" />
+    <Compile Include="Controllers\ClinicalController.cs" />
     <Compile Include="Controllers\HealthRecordController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CurriculumVitaeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\SubClinicalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -180,14 +182,47 @@
     <Compile Include="Migrations\202405040139179_init.Designer.cs">
       <DependentUpon>202405040139179_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405251322427_updateDB.cs" />
+    <Compile Include="Migrations\202405251322427_updateDB.Designer.cs">
+      <DependentUpon>202405251322427_updateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405251328162_updateDB2.cs" />
+    <Compile Include="Migrations\202405251328162_updateDB2.Designer.cs">
+      <DependentUpon>202405251328162_updateDB2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405251339530_updateDB3.cs" />
+    <Compile Include="Migrations\202405251339530_updateDB3.Designer.cs">
+      <DependentUpon>202405251339530_updateDB3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405251358390_updateDB4.cs" />
+    <Compile Include="Migrations\202405251358390_updateDB4.Designer.cs">
+      <DependentUpon>202405251358390_updateDB4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BiochemicalTest.cs" />
+    <Compile Include="Models\BloodTest.cs" />
     <Compile Include="Models\Citizen.cs" />
+    <Compile Include="Models\Clinical.cs" />
+    <Compile Include="Models\DentalOral.cs" />
+    <Compile Include="Models\Dermatology.cs" />
+    <Compile Include="Models\ENT.cs" />
+    <Compile Include="Models\Eyes.cs" />
     <Compile Include="Models\HealthRecord.cs" />
+    <Compile Include="Models\Hearing.cs" />
+    <Compile Include="Models\ImmunologicalTest.cs" />
+    <Compile Include="Models\InternalMedicine.cs" />
+    <Compile Include="Models\Neurology.cs" />
     <Compile Include="Models\NVQSDBContext.cs" />
     <Compile Include="Models\CurriculumVitae.cs" />
+    <Compile Include="Models\PhysicalStrength.cs" />
     <Compile Include="Models\Registration.cs" />
+    <Compile Include="Models\Subclinical.cs" />
+    <Compile Include="Models\Surgery.cs" />
+    <Compile Include="Models\UrineTest.cs" />
+    <Compile Include="Models\Vision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\HealthRecordListVM.cs" />
     <Compile Include="ViewModel\LoginVM.cs" />
     <Compile Include="ViewModel\RegisterVM.cs" />
   </ItemGroup>
@@ -260,6 +295,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\CurriculumVitae\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -279,10 +315,11 @@
     <Content Include="Views\CurriculumVitae\Detail.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\HealthRecord\List.cshtml" />
+    <Content Include="Views\Clinical\Detail.cshtml" />
+    <Content Include="Views\SubClinical\Detail.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\HealthRecord\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
@@ -297,6 +334,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405040139179_init.resx">
       <DependentUpon>202405040139179_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405251322427_updateDB.resx">
+      <DependentUpon>202405251322427_updateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405251328162_updateDB2.resx">
+      <DependentUpon>202405251328162_updateDB2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405251339530_updateDB3.resx">
+      <DependentUpon>202405251339530_updateDB3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405251358390_updateDB4.resx">
+      <DependentUpon>202405251358390_updateDB4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -16,9 +16,9 @@ namespace DK_NVQS.Controllers
             return View(list);
         }
 
-        public ActionResult Detail(int id)
+        public ActionResult Detail(string id)
         {
-            var curriculumVitae = db.CurriculumVitaes.FirstOrDefault(a => a.QurriculumVitaeID == id);
+            var curriculumVitae = db.CurriculumVitaes.FirstOrDefault(a => a.CitizenID == id);
             if(curriculumVitae == null)
             {
                 return HttpNotFound("Không tìm thấy bản sơ yếu lý lịch!");

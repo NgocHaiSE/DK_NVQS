@@ -1,0 +1,134 @@
+﻿@model DK_NVQS.Models.Clinical
+
+@{
+    ViewBag.Title = "Khám lâm sàng và kết luận";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .section-title {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="section-title">
+            <h6>II. Khám lâm sàng và kết luận</h6>
+        </div>
+        <table>
+            <tr>
+                <th>Chỉ tiêu</th>
+                <th>Điểm</th>
+                <th>Lý do</th>
+                <th>Y, BS khám (ký, họ tên)</th>
+            </tr>
+            @if (Model.PhysicalStrength != null && Model.PhysicalStrength.Any())
+            {
+                foreach (var item in Model.PhysicalStrength)
+                {
+                    <tr>
+                        <td>Thể lực</td>
+                        <td>@item.Score</td>
+                        <td>Chiều cao: @item.Height cm; Cân nặng: @item.Weight kg; Chỉ số BMI: @item.BMI; Vòng ngực TB: @item.ChestCircumference cm</td>
+                        <td>@item.DoctorSignature</td>
+                    </tr>
+                }
+            }
+            @if (Model.Eyes != null && Model.Eyes.Any())
+            {
+                foreach (var item in Model.Eyes)
+                {
+                    <tr>
+                        <td>Mắt</td>
+                        <td>@item.Score</td>
+                        <td></td>
+                        @*<td>Không kính: MP @item.WithoutGlasses.RightEye; MT @item.WithoutGlasses.LeftEye; Có kính: MP @item.WithGlasses.RightEye; MT @item.WithGlasses.LeftEye</td>*@
+                        <td>@item.DoctorSignature</td>
+                    </tr>
+                }
+            }
+            @if (Model.ENT != null && Model.ENT.Any())
+            {
+                foreach (var item in Model.ENT)
+                {
+                    <tr>
+                        <td>TMH</td>
+                        <td>@item.Score</td>
+                        <td></td>
+                        @*<td>Nói thường: TP @item.NormalSpeak.RightEar m; TT @item.NormalSpeak.LeftEar m; Nói thầm: TP @item.WhisperSpeak.RightEar m; TT @item.WhisperSpeak.LeftEar m</td>*@
+                        <td>@item.DoctorSignature</td>
+                    </tr>
+                }
+            }
+            @if (Model.DentalOral != null && Model.DentalOral.Any())
+            {
+                foreach (var item in Model.DentalOral)
+                {
+                    <tr>
+                        <td>Răng hàm mặt</td>
+                        <td>@item.Score</td>
+                        <td>@item.Reason</td>
+                        <td>@item.DoctorSignature</td>
+                    </tr>
+                }
+            }
+            @if (Model.InternalMedicine != null && Model.InternalMedicine.Any())
+            {
+                foreach (var item in Model.InternalMedicine)
+                {
+                    <tr>
+                        <td>Nội khoa</td>
+                        <td>@item.Score</td>
+                        <td>M: @item.PulseRate lần/phút; HA: @item.BloodPressure mmHg</td>
+                        <td>@item.DoctorSignature</td>
+                    </tr>
+                }
+            }
+            @if (Model.Neurology != null && Model.Neurology.Any())
+            {
+                foreach (var item in Model.Neurology)
+                {
+                    <tr>
+                        <td>Tâm thần kinh</td>
+                        <td>@item.Score</td>
+                        <td>@item.Reason</td>
+                        <td>@item.DoctorSignature</td>
+                    </tr>
+                }
+            }
+            <tr>
+                <td>Kết luận</td>
+                <td colspan="3">@Model.Conclusion</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
