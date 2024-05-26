@@ -13,16 +13,11 @@ namespace DK_NVQS.Controllers
         public NVQSDBContext db = new NVQSDBContext();
         public ActionResult ChangeStatus(int id, string newStatus)
         {
-            var registration = db.Registrations.FirstOrDefault(r => r.RegistrationFormID == id);
+            var registration = db.Registrations.Find(id);
             if (registration != null)
             {
                 registration.Status = newStatus;
                 db.SaveChanges();
-                TempData["Message"] = "Status updated successfully.";
-            }
-            else
-            {
-                TempData["Error"] = "Registration not found.";
             }
             return RedirectToAction("RegisterList", "Registration");
         }

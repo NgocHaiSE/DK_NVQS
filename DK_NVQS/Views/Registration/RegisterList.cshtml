@@ -35,7 +35,7 @@
         <th>CCCD</th>
         <th>Họ Tên</th>
         <th>Năm</th>
-        <th>Số lần đăng ký trước</th>
+        <th>Tổng số lần đăng ký</th>
         <th>Trạng thái</th>
         <th>Hồ sơ sức khỏe</th>
         <th>Thay đổi trạng thái</th>
@@ -50,15 +50,16 @@
                 <td>@item.NumberOfRegisters</td>
                 <td>@item.Status</td>
                 <td>
-                    <a href="@Url.Action("List", "HealthRecord", new { id = item.CitizenID })">Xem</a>
+                    <a href="@Url.Action("List", "HealthRecord", new { id = item.Citizen.CitizenID })">Xem</a>
                 </td>
                 <td>
                     <form method="post" action="@Url.Action("ChangeStatus", "Admin")">
+                        @Html.AntiForgeryToken()
                         <input type="hidden" name="id" value="@item.RegistrationFormID" />
                         <select name="newStatus" class="form-control" onchange="this.form.submit()">
-                            <option value="Pending" @(item.Status == "Chờ xét duyệt" ? "selected" : "")>Chờ xét duyệt</option>
-                            <option value="Approved" @(item.Status == "Phê duyệt" ? "selected" : "")>Phê duyệt</option>
-                            <option value="Rejected" @(item.Status == "Từ chối" ? "selected" : "")>Từ chối</option>
+                            <option value="Chờ xét duyệt" @(item.Status == "Chờ xét duyệt" ? "selected" : "")>Chờ xét duyệt</option>
+                            <option value="Phê duyệt" @(item.Status == "Phê duyệt" ? "selected" : "")>Phê duyệt</option>
+                            <option value="Từ chối" @(item.Status == "Từ chối" ? "selected" : "")>Từ chối</option>
                         </select>
                     </form>
                 </td>

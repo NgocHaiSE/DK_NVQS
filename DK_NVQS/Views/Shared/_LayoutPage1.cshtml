@@ -25,14 +25,14 @@
         <div class="col-8"></div>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/home/index">Trang chủ</a>
+                <a class="nav-link" href="/Citizen/Citizenlist">Danh sách công dân</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/home/DanhSachDangKyNVQS">Danh sách đăng ký NVQS</a>
+                <a class="nav-link" href="/Registration/RegisterList">Danh sách đăng ký NVQS</a>
             </li>
-            <li class="nav-item">
+            @*<li class="nav-item">
                 <a class="nav-link" href="/home/DanhSachMien">Danh sách miễn NVQS</a>
-            </li>
+            </li>*@
         </ul>
         @if (User.Identity.IsAuthenticated)
         {

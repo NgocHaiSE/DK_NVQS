@@ -144,6 +144,12 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -163,6 +169,7 @@
     <Compile Include="Controllers\CurriculumVitaeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Controllers\SubClinicalController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -199,6 +206,18 @@
     <Compile Include="Migrations\202405251358390_updateDB4.Designer.cs">
       <DependentUpon>202405251358390_updateDB4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405261114042_InitialCreate.cs" />
+    <Compile Include="Migrations\202405261114042_InitialCreate.Designer.cs">
+      <DependentUpon>202405261114042_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405261202019_update6.cs" />
+    <Compile Include="Migrations\202405261202019_update6.Designer.cs">
+      <DependentUpon>202405261202019_update6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405261208359_update7.cs" />
+    <Compile Include="Migrations\202405261208359_update7.Designer.cs">
+      <DependentUpon>202405261208359_update7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BiochemicalTest.cs" />
     <Compile Include="Models\BloodTest.cs" />
@@ -225,7 +244,9 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\HealthRecordListVM.cs" />
     <Compile Include="ViewModel\LoginVM.cs" />
+    <Compile Include="ViewModel\QRVM.cs" />
     <Compile Include="ViewModel\RegisterVM.cs" />
+    <Compile Include="ViewModel\RegistrationVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\NVQS.mdf" />
@@ -297,6 +318,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\CurriculumVitae\style.css" />
+    <Content Include="Views\User\html5-qrcode.min.js" />
+    <Content Include="Views\User\qrcode.min.js" />
+    <Content Include="Views\User\script.js" />
+    <Content Include="Views\User\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -322,8 +347,11 @@
     <Content Include="Views\Citizen\Edit.cshtml" />
     <Content Include="Views\Citizen\Delete.cshtml" />
     <Content Include="Views\Citizen\Add.cshtml" />
+    <Content Include="Views\User\Home.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="qr\" />
     <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
@@ -352,6 +380,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405251358390_updateDB4.resx">
       <DependentUpon>202405251358390_updateDB4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405261114042_InitialCreate.resx">
+      <DependentUpon>202405261114042_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405261202019_update6.resx">
+      <DependentUpon>202405261202019_update6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405261208359_update7.resx">
+      <DependentUpon>202405261208359_update7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

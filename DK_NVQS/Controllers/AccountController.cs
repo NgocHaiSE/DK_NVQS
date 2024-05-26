@@ -61,7 +61,7 @@ namespace DK_NVQS.Controllers
                 ModelState.AddModelError("New Error", "Invalid data");
                 return View();
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Citizenlist", "Citizen");
         }
         public ActionResult Login()
         {
@@ -80,7 +80,7 @@ namespace DK_NVQS.Controllers
                 var userIdentity = userManager.CreateIdentity(user,
                         DefaultAuthenticationTypes.ApplicationCookie);
                 authenManager.SignIn(new AuthenticationProperties(), userIdentity);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Citizenlist", "Citizen");
             }
             else
             {

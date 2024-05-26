@@ -18,7 +18,20 @@ namespace DK_NVQS.Models
         public Nullable<DateTime> DateOfBirth { get; set; }
         public string Address { get; set; }
         public string Hometown { get; set; }
-        public Nullable<int> Age { get; set; }
+        public int Age
+        {
+            get
+            {
+                if (DateOfBirth.HasValue)
+                {
+                    var today = DateTime.Today;
+                    var age = today.Year - DateOfBirth.Value.Year;
+                    if (DateOfBirth.Value.Date > today.AddYears(-age)) age--;
+                    return age;
+                }
+                return 0;
+            }
+        }
         public string Status { get; set; }
         public Nullable<bool> Eligible { get; set; }
         public Nullable<bool> Ready { get; set; }

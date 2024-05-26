@@ -1,0 +1,78 @@
+﻿@if (!string.IsNullOrEmpty(Model.SuccessMessage))
+{
+    <div class="alert alert-success">@Model.SuccessMessage</div>
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">@Model.ErrorMessage</div>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quét mã CCCD</title>
+</head>
+<body>
+    <div id="qr_result"></div>
+    <h1>Quét mã CCCD</h1>
+    <div style="display: flex; justify-content: center;">
+        <div id="qr_reader" style="width: 500px;"></div>
+    </div>
+    <form id="registrationForm" action="/User/Register" method="post">
+        <label for="idNumber">Số CCCD:</label>
+        <input type="text" id="citizenID" name="citizenID" required />
+        <br />
+        <label for="fullName">Họ tên:</label>
+        <input type="text" id="fullName" name="fullName" required />
+        <br />
+        <label for="birthDate">Birth Date:</label>
+        <input type="text" id="birthDate" name="birthDate" required />
+        <br />
+        <label for="gender">Giới tính:</label>
+        <input type="text" id="gender" name="gender" required />
+        <br />
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" name="address" required />
+        <br />
+        <label for="issueDate">Ngày cấp:</label>
+        <input type="text" id="issueDate" name="issueDate" required />
+        <br />
+        <button type="submit">Submit</button>
+    </form>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lastResult, countResults = 0;
+
+            function onScanSuccess(decodedText, decodedResult) {
+                if (decodedText !== lastResult) {
+                    countResults++;
+                    lastResult = decodedText;
+                    //alert("Result: " + decodedText);
+
+                    var parts = decodedText.split('|');
+                    if (parts.length === 7) {
+                        document.getElementById('citizenID').value = parts[0];
+                        document.getElementById('fullName').value = parts[2];
+                        document.getElementById('birthDate').value = parts[3];
+                        document.getElementById('gender').value = parts[4];
+                        document.getElementById('address').value = parts[5];
+                        document.getElementById('issueDate').value = parts[6];
+                    }
+                }
+            }
+
+            function onScanFailure(error) {
+                console.warn(`QR error = ${error}`);
+            }
+
+            var htmlScanner = new Html5QrcodeScanner("qr_reader", { fps: 10, qrbox: 250 });
+            htmlScanner.render(onScanSuccess, onScanFailure);
+        });
+    </script>
+</body>
+</html>
+

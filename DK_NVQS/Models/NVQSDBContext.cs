@@ -29,5 +29,6 @@ namespace DK_NVQS.Models
         public DbSet<Surgery> SurgeryTests { get; set;}
         public DbSet<UrineTest> UrineTests { get; set;}
         public DbSet<Vision> Visions { get; set; }
+        
     }
 }

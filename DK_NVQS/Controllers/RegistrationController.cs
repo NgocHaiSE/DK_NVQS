@@ -1,9 +1,5 @@
 ﻿using DK_NVQS.Models;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DK_NVQS.Controllers
@@ -11,9 +7,9 @@ namespace DK_NVQS.Controllers
     public class RegistrationController : Controller
     {
         NVQSDBContext db = new NVQSDBContext();
-        // GET: RegistrationForm
 
-        [HttpPost]
+        // GET: Registration/RegisterList
+        [HttpGet]
         public ActionResult RegisterList(string citizenID, string name, int? numberOfRegister,
             string year, string status)
         {
@@ -39,9 +35,9 @@ namespace DK_NVQS.Controllers
                 registerList = registerList.Where(b => b.Status.ToLower() == status.ToLower());
             }
 
-            if(numberOfRegister.HasValue)
+            if (numberOfRegister.HasValue)
             {
-                registerList = registerList.Where(b => b.NumberOfRegisters ==  numberOfRegister.Value);
+                registerList = registerList.Where(b => b.NumberOfRegisters == numberOfRegister.Value);
             }
 
             return View(registerList.ToList());
