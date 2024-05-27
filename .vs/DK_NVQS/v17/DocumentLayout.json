@@ -1,26 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C#\\DK_NVQS\\",
+  "WorkspaceRootPath": "D:\\nvqs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|d:\\c#\\dk_nvqs\\dk_nvqs\\views\\healthrecord\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\views\\healthrecord\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NVQS_DK_NVQS_APP_DATA_NVQS.MDF/True/SqlTable/dbo.BiochemicalTests.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|D:\\C#\\DK_NVQS\\dk_nvqs\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NAM\\AppData\\Local\\Temp\\jcmxzuuq..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|d:\\c#\\dk_nvqs\\dk_nvqs\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NVQS_DK_NVQS_APP_DATA_NVQS.MDF/True/SqlTable/dbo.HealthRecords.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|d:\\c#\\dk_nvqs\\dk_nvqs\\viewmodel\\qrvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\viewmodel\\qrvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NAM\\AppData\\Local\\Temp\\3qebjykt..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|D:\\C#\\DK_NVQS\\dk_nvqs\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A41CAF67-76FA-48FB-8431-60CEBE4792C5}|DK_NVQS\\DK_NVQS.csproj|solutionrelative:dk_nvqs\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NVQS_DK_NVQS_APP_DATA_NVQS.MDF/True/SqlTable/dbo.Clinicals.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NAM\\AppData\\Local\\Temp\\3qebjykt..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NAM\\AppData\\Local\\Temp\\3qebjykt..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NAM\\AppData\\Local\\Temp\\jcmxzuuq..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NAM\\AppData\\Local\\Temp\\jcmxzuuq..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,75 +41,64 @@
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QRVM.cs",
-              "DocumentMoniker": "D:\\C#\\DK_NVQS\\DK_NVQS\\ViewModel\\QRVM.cs",
-              "RelativeDocumentMoniker": "DK_NVQS\\ViewModel\\QRVM.cs",
-              "ToolTip": "D:\\C#\\DK_NVQS\\DK_NVQS\\ViewModel\\QRVM.cs",
-              "RelativeToolTip": "DK_NVQS\\ViewModel\\QRVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T17:45:37.46Z",
-              "EditorCaption": ""
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "List.cshtml",
-              "DocumentMoniker": "D:\\C#\\DK_NVQS\\DK_NVQS\\Views\\HealthRecord\\List.cshtml",
-              "RelativeDocumentMoniker": "DK_NVQS\\Views\\HealthRecord\\List.cshtml",
-              "ToolTip": "D:\\C#\\DK_NVQS\\DK_NVQS\\Views\\HealthRecord\\List.cshtml",
-              "RelativeToolTip": "DK_NVQS\\Views\\HealthRecord\\List.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T17:23:01.684Z",
+              "Title": "dbo.BiochemicalTests [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NVQS_DK_NVQS_APP_DATA_NVQS.MDF/True/SqlTable/dbo.BiochemicalTests.sql",
+              "ToolTip": "dbo.BiochemicalTests [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-27T00:13:12.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\C#\\DK_NVQS\\DK_NVQS\\Views\\User\\Register.cshtml",
-              "RelativeDocumentMoniker": "DK_NVQS\\Views\\User\\Register.cshtml",
-              "ToolTip": "D:\\C#\\DK_NVQS\\DK_NVQS\\Views\\User\\Register.cshtml",
-              "RelativeToolTip": "DK_NVQS\\Views\\User\\Register.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAADQAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T13:27:48.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\C#\\DK_NVQS\\DK_NVQS\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "DK_NVQS\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\C#\\DK_NVQS\\DK_NVQS\\Controllers\\UserController.cs",
-              "RelativeToolTip": "DK_NVQS\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBwAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T12:23:22.047Z",
+              "Title": "SQLQuery4.sql ",
+              "DocumentMoniker": "C:\\Users\\NAM\\AppData\\Local\\Temp\\jcmxzuuq..sql",
+              "ToolTip": "SQLQuery4.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-27T00:12:44.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\C#\\DK_NVQS\\DK_NVQS\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "DK_NVQS\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\C#\\DK_NVQS\\DK_NVQS\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "DK_NVQS\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T02:37:29.861Z",
+              "Title": "dbo.Clinicals [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NVQS_DK_NVQS_APP_DATA_NVQS.MDF/True/SqlTable/dbo.Clinicals.sql",
+              "ToolTip": "dbo.Clinicals [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-27T00:11:54.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.HealthRecords [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NVQS_DK_NVQS_APP_DATA_NVQS.MDF/True/SqlTable/dbo.HealthRecords.sql",
+              "ToolTip": "dbo.HealthRecords [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-27T00:09:07.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SQLQuery3.sql ",
+              "DocumentMoniker": "C:\\Users\\NAM\\AppData\\Local\\Temp\\3qebjykt..sql",
+              "ToolTip": "SQLQuery3.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-27T00:08:39.535Z",
               "EditorCaption": ""
             }
           ]
