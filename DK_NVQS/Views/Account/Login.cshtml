@@ -2,31 +2,65 @@
 
 @{
     ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/layoutLogin.cshtml";
 }
 
+<style>
+    .login-box {
+        width: 450px;
+        height: 500px;
+        margin-top: 100px;
+        padding: 50px 30px;
+        background-color: #91c7e8b8;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0.375rem;
+    }
 
-<h2>Login</h2>
-@using (Html.BeginForm("Login", "Account", FormMethod.Post))
-{
-    <div class="row w-25 mx-auto">
-        <div class="col-md-12">
-            @Html.LabelFor(temp => temp.UserName, "Tài khoản")
-            @Html.TextBoxFor(temp => temp.UserName, new { @class = "form-control" })
-            @Html.ValidationMessageFor(temp => temp.UserName)
+    .login-btn {
+        margin-top: 30px;
+        width: 150px;
+        height: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .user-name-box, pw-box {
+        width: 100%
+    }
+
+
+    .login-form {
+        width: 300px;
+    }
+
+        .login-form > * {
+            margin-bottom: 20px;
+        }
+</style>
+
+<div class="container">
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "login-box row justify-content-center" }))
+    {
+        <div class="login-form row mx-auto text-white fw-bold">
+            <h2 class="text-center">ĐĂNG NHẬP</h2>
+            <div class="col-md-12">
+                @Html.LabelFor(temp => temp.UserName, "Tài khoản")
+                @Html.TextBoxFor(temp => temp.UserName, new { @class = "form-control user-name-box" })
+                @Html.ValidationMessageFor(temp => temp.UserName, "", new { @class = "fw-normal" })
+            </div>
+            <div class="col-md-12">
+                @Html.LabelFor(temp => temp.Password, "Mật khẩu")
+                @Html.TextBoxFor(temp => temp.Password, new { @class = "form-control pw-box", type = "password" })
+                @Html.ValidationMessageFor(temp => temp.Password, "", new { @class = "fw-normal" })
+            </div>
         </div>
-        <div class="col-md-12">
-            @Html.LabelFor(temp => temp.Password, "Mật khẩu")
-            @Html.TextBoxFor(temp => temp.Password, new { @class = "form-control", type = "password" })
-            @Html.ValidationMessageFor(temp => temp.Password)
+        <div class="row w-25 mx-auto">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-success login-btn fw-bold">Đăng nhập</button>
+            </div>
         </div>
-    </div>
-    <div class="row w-25 mx-auto">
-        <div class="col-md-12">
-            @Html.ValidationSummary()
-        </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <button type="submit" class="btn btn-success">Register</button>
-        </div>
-    </div>
-}
+    }
+</div>

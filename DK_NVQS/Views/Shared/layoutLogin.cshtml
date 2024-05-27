@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <style>
+        .field-validation-error {
+            color: red;
+        }
+
+        .requiredMark:after {
+            content: "*";
+            color: red;
+        }
+
+        .navbar-expand-sm {
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+        <ul class="navbar-nav"
+            @if (ViewBag.title == "Login") {<li class="nav-item">
+                   <a class="nav-link text-light fw-bold" href="/Account/Register">Đăng ký</a>
+                </li>
+            }
+            else{
+                <li class="nav-item">
+                    <a class="nav-link text-light fw-bold" href="/Account/Login">Đăng nhập</a>
+                </li>
+            }
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+</body>
+</html>

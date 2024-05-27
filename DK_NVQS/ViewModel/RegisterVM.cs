@@ -8,14 +8,14 @@ namespace DK_NVQS.ViewModel
 {
     public class RegisterVM
     {
-        [Required(ErrorMessage = "Không được để trống tên tài khoản.")]
+        [Required(ErrorMessage = "Tên tài khoản trống.")]
         public string UserName { get; set; }
-        [Required(ErrorMessage = "Không được để trống mật khẩu.")]
+        [Required(ErrorMessage = "Mật khẩu trống.")]
         public string Password { get; set; }
         [Required(ErrorMessage = "Nhập lại mật khẩu.")]
         [Compare("Password", ErrorMessage = "Mật khẩu không trùng khớp")]
         public string ConfirmPassword { get; set; }
-        [Required(ErrorMessage = "Không được để trống email.")]
+        [Required(ErrorMessage = "Email trống.")]
         [EmailAddress(ErrorMessage = "Email không hợp lệ.")]
         public string Email { get; set; }
         public string CitizenID { get; set; }

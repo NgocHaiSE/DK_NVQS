@@ -8,9 +8,9 @@ namespace DK_NVQS.ViewModel
 {
     public class LoginVM
     {
-        [Required(ErrorMessage = "Không được để trống tên tài khoản.")]
+        [Required(ErrorMessage = "Tên tài khoản trống.")]
         public string UserName { get; set; }
-        [Required(ErrorMessage = "Không được để trống mật khẩu.")]
+        [Required(ErrorMessage = "Mật khẩu trống.")]
         public string Password { get; set; }
     }
 }

@@ -349,6 +349,7 @@
     <Content Include="Views\Citizen\Add.cshtml" />
     <Content Include="Views\User\Home.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Shared\layoutLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="qr\" />

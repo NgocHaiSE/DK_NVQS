@@ -2,46 +2,87 @@
 
 @{
     ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/layoutLogin.cshtml";
 }
 
+<style>
+    .register-box {
+        width: 450px;
+        margin-top: 20px;
+        padding: 45px 30px;
+        background-color: #91c7e8b8;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0.375rem;
+    }
+
+    .register-btn {
+        width: 150px;
+        height: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .user-name-box, pw-box {
+        width: 100%
+    }
+
+
+    .register-form {
+        width: 300px;
+    }
+
+        .register-form > * {
+            margin-bottom: 15px;
+        }
+
+    .form-control {
+        height: 35px;
+    }
+</style>
 
 <div class="container">
-    <h2>Register</h2>
-
-    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "register-box row justify-content-center" }))
     {
-        <div class="row w-50 mx-auto">
-            <div class="col-md-6">
-                @Html.LabelFor(temp => temp.Name, "Họ tên", new { @class = "requiredMark" })
+        <div class="register-form row mx-auto text-white fw-bold    ">
+            <h2 class="text-center">ĐĂNG KÝ</h2>
+            <div class="col-md-12">
+                @Html.LabelFor(temp => temp.Name, "Họ tên")
                 @Html.TextBoxFor(temp => temp.Name, new { @class = "form-control" })
-                @Html.ValidationMessageFor(temp => temp.Name)
+                @Html.ValidationMessageFor(temp => temp.Name, "", new { @class = "fw-normal" })
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 @Html.LabelFor(temp => temp.UserName, "Tài khoản", new { @class = "requiredMark" })
                 @Html.TextBoxFor(temp => temp.UserName, new { @class = "form-control" })
-                @Html.ValidationMessageFor(temp => temp.UserName)
+                @Html.ValidationMessageFor(temp => temp.UserName, "", new { @class = "fw-normal" })
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 @Html.LabelFor(temp => temp.Password, "Mật khẩu", new { @class = "requiredMark" })
                 @Html.TextBoxFor(temp => temp.Password, new { @class = "form-control", type = "password" })
-                @Html.ValidationMessageFor(temp => temp.Password)
+                @Html.ValidationMessageFor(temp => temp.Password, "", new { @class = "fw-normal" })
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 @Html.LabelFor(temp => temp.ConfirmPassword, "Xác nhận mật khẩu", new { @class = "requiredMark" })
                 @Html.TextBoxFor(temp => temp.ConfirmPassword, new { @class = "form-control", type = "password" })
-                @Html.ValidationMessageFor(temp => temp.ConfirmPassword)
+                @Html.ValidationMessageFor(temp => temp.ConfirmPassword, "", new { @class = "fw-normal" })
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 @Html.LabelFor(temp => temp.Email, "Email", new { @class = "requiredMark" })
                 @Html.TextBoxFor(temp => temp.Email, new { @class = "form-control" })
-                @Html.ValidationMessageFor(temp => temp.Email)
+                @Html.ValidationMessageFor(temp => temp.Email, "", new { @class = "fw-normal" })
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 @Html.LabelFor(temp => temp.CitizenID, "CCCD")
                 @Html.TextBoxFor(temp => temp.CitizenID, new { @class = "form-control" })
-                @Html.ValidationMessageFor(temp => temp.CitizenID)
+                @Html.ValidationMessageFor(temp => temp.CitizenID, "", new { @class = "fw-normal" })
             </div>
-            <button type="submit" class="btn btn-success">Đăng ký</button>
+        </div>
+        <div class="row w-25 mx-auto">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-success register-btn">Đăng ký</button>
+            </div>
         </div>
     }
 </div>
