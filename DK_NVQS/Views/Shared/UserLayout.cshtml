@@ -9,22 +9,20 @@
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
     <style>
+        li {
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
-        @*<a class="navbar-brand" href="#">Company</a>*@
-        <div class="col-8"></div>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/Citizen/Citizenlist">Danh sách công dân</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Registration/RegisterList">Danh sách đăng ký NVQS</a>
-            </li>
-            @*<li class="nav-item">
-                    <a class="nav-link" href="/home/DanhSachMien">Danh sách miễn NVQS</a>
-                </li>*@
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark" ; text-align: center" }">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a href="#" class="nav-link text-light fw-bold">Giới thiệu</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light fw-bold">Thông tin đăng ký NVQS 2024</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light fw-bold">Đăng ký trực tuyến</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light fw-bold">Phản ánh kiến nghị</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light fw-bold">Thủ tục hành chính</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light fw-bold">Hỗ trợ</a></li>
         </ul>
         @if (User.Identity.IsAuthenticated)
         {
@@ -32,6 +30,7 @@
                 Hello @User.Identity.Name;
             </div>
         }
+
     </nav>
     <div class="container-fluid">
         @RenderBody()
