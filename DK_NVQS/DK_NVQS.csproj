@@ -350,6 +350,7 @@
     <Content Include="Views\User\Home.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\Shared\layoutLogin.cshtml" />
+    <Content Include="Views\Shared\UserLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="qr\" />
